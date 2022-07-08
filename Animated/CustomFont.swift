@@ -1,10 +1,3 @@
-//
-//  CustomFont.swift
-//  Animated
-//
-//  Created by Manuel Duarte on 4/7/22.
-//
-
 import SwiftUI
 
 
