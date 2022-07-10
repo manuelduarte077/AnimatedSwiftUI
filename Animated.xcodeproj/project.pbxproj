@@ -85,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				64F88BA8287269CD00C1008A /* OnBoardingView.swift */,
+				64DA1F9F287B66A1001A1F9C /* HomeView.swift */,
 				64119DAA287A645C00EB0453 /* SigninView.swift */,
 			);
 			path = Views;
@@ -104,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				64DA1F94287AAE4A001A1F9C /* TabBar.swift */,
+				64F88B8A287266AB00C1008A /* ContentView.swift */,
 				64DA1FA9287B6B7E001A1F9C /* SideMenu.swift */,
 			);
 			path = Navigation;
@@ -116,6 +118,16 @@
 				64DA1F9D287B646A001A1F9C /* CourseSection.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		64DA1FAD287B7485001A1F9C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				64DA1F99287B5C5B001A1F9C /* VCard.swift */,
+				64DA1F9B287B641F001A1F9C /* HCard.swift */,
+				64DA1FAB287B70EE001A1F9C /* MenuRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		64F88B7C287266AB00C1008A = {
@@ -137,17 +149,13 @@
 		64F88B87287266AB00C1008A /* Animated */ = {
 			isa = PBXGroup;
 			children = (
+				64F88BB12872C31C00C1008A /* Info.plist */,
+				64DA1FAD287B7485001A1F9C /* Components */,
 				64DA1F96287AC589001A1F9C /* Models */,
 				64DA1F93287AAE3D001A1F9C /* Navigation */,
-				64F88BB12872C31C00C1008A /* Info.plist */,
 				64DA1F8E287AA49C001A1F9C /* Styles */,
 				64DA1F8D287AA489001A1F9C /* Views */,
 				64F88B88287266AB00C1008A /* AnimatedApp.swift */,
-				64F88B8A287266AB00C1008A /* ContentView.swift */,
-				64DA1F99287B5C5B001A1F9C /* VCard.swift */,
-				64DA1F9F287B66A1001A1F9C /* HomeView.swift */,
-				64DA1FAB287B70EE001A1F9C /* MenuRow.swift */,
-				64DA1F9B287B641F001A1F9C /* HCard.swift */,
 				64F88B8C287266AE00C1008A /* Assets.xcassets */,
 				64F88BAA2872B9D000C1008A /* Fonts */,
 				64F88B962872690C00C1008A /* RiveAssets */,
