@@ -6,10 +6,40 @@ struct SigninView: View {
     @State var email = ""
     @State var password = ""
     @State var isLoading = false
+    @Binding var showModal: Bool
     
     let check = RiveViewModel(fileName: "check", stateMachineName: "State Machine 1")
     let confetti = RiveViewModel(fileName: "confetti", stateMachineName: "State Machine 1")
-
+    
+    
+    func logIn() {
+        isLoading = true
+        
+        if email != "" {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                check.triggerInput("Check")
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                isLoading = false
+                confetti.triggerInput("Trigger explosion")
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                withAnimation {
+                    showModal = false
+                }
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                check.triggerInput("Error")
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                isLoading = false
+            }
+        }
+    }
+    
+    
+    
     var body: some View {
         VStack (spacing: 24) {
             Text("Sign In")
@@ -34,13 +64,7 @@ struct SigninView: View {
             }
             
             Button {
-                isLoading = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                   try? check.triggerInput("Check")
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    confetti.triggerInput("Trigger explosion")
-                }
+                logIn()
                 
             } label: {
                 Label("Sign In", systemImage: "arrow.right")
@@ -50,9 +74,9 @@ struct SigninView: View {
                     .foregroundColor(.white)
                     .cornerRadius(20, corners: [.topRight, .bottomLeft, .bottomRight])
                     .cornerRadius(8)
-                .shadow(color: Color(hex: "F77D8E").opacity(0.5), radius: 20, x: 0, y: 10)
+                    .shadow(color: Color(hex: "F77D8E").opacity(0.5), radius: 20, x: 0, y: 10)
             }
-
+            
             
             HStack {
                 Rectangle().frame(height: 1).opacity(0.1)
@@ -79,19 +103,28 @@ struct SigninView: View {
         .shadow(color: Color("Shadow").opacity(0.3), radius: 30, x: 0, y: 30)
         .overlay(
             RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .stroke(.linearGradient(colors: [.white.opacity(0.8), .white.opacity(0.1)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .stroke(
+                    .linearGradient(
+                        colors: [
+                            .white.opacity(0.8),
+                            .white.opacity(0.1)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
         )
         .padding()
         .overlay(
             ZStack {
-                if !isLoading {
+                if isLoading {
                     check.view()
                         .frame(width: 100, height: 100)
-                        .allowsTightening(false)
+                        .allowsHitTesting(false)
                 }
                 confetti.view()
                     .scaleEffect(3)
-                    .allowsTightening(false)
+                    .allowsHitTesting(false)
             }
             
         )
@@ -101,6 +134,6 @@ struct SigninView: View {
 
 struct SigninView_Previews: PreviewProvider{
     static var previews: some View {
-        SigninView()
+        SigninView(showModal: .constant(true))
     }
 }

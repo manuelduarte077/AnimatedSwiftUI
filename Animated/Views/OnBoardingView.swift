@@ -5,6 +5,7 @@ struct OnBoardingView: View {
     let button = RiveViewModel(fileName: "button")
     @State var showModal = false
     
+    
     var body: some View {
         ZStack {
             background
@@ -17,7 +18,7 @@ struct OnBoardingView: View {
                 .opacity(showModal ? 0.4 : 0)
             
             if showModal  {
-                SigninView()
+                SigninView(showModal: $showModal)
                     .transition(.move(edge: .top).combined(with: .opacity))
                     .overlay(
                         Button {
