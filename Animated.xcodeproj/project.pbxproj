@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		64119DAB287A645C00EB0453 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64119DAA287A645C00EB0453 /* SigninView.swift */; };
-		64C4E61C287A62E800EB00C2 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 64C4E61B287A62E800EB00C2 /* RiveRuntime */; };
 		64DA1F8A287A7965001A1F9C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F89287A7965001A1F9C /* CustomTextField.swift */; };
+		64DA1F8C287A7D8D001A1F9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F8B287A7D8D001A1F9C /* Extensions.swift */; };
+		64DA1F92287AA60B001A1F9C /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 64DA1F91287AA60B001A1F9C /* RiveRuntime */; };
+		64DA1F95287AAE4A001A1F9C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F94287AAE4A001A1F9C /* TabBar.swift */; };
 		64F88B89287266AB00C1008A /* AnimatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F88B88287266AB00C1008A /* AnimatedApp.swift */; };
 		64F88B8B287266AB00C1008A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F88B8A287266AB00C1008A /* ContentView.swift */; };
 		64F88B8D287266AE00C1008A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64F88B8C287266AE00C1008A /* Assets.xcassets */; };
@@ -21,7 +23,6 @@
 		64F88BA22872690C00C1008A /* shapes.riv in Resources */ = {isa = PBXBuildFile; fileRef = 64F88B9B2872690C00C1008A /* shapes.riv */; };
 		64F88BA32872690C00C1008A /* button.riv in Resources */ = {isa = PBXBuildFile; fileRef = 64F88B9C2872690C00C1008A /* button.riv */; };
 		64F88BA42872690C00C1008A /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = 64F88B9D2872690C00C1008A /* icons.riv */; };
-		64F88BA7287269A800C1008A /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 64F88BA6287269A800C1008A /* RiveRuntime */; };
 		64F88BA9287269CD00C1008A /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F88BA8287269CD00C1008A /* OnBoardingView.swift */; };
 		64F88BAE2872B9D000C1008A /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64F88BAB2872B9D000C1008A /* Inter-Regular.ttf */; };
 		64F88BAF2872B9D000C1008A /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64F88BAC2872B9D000C1008A /* Poppins-Bold.ttf */; };
@@ -32,6 +33,8 @@
 /* Begin PBXFileReference section */
 		64119DAA287A645C00EB0453 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		64DA1F89287A7965001A1F9C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		64DA1F8B287A7D8D001A1F9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		64DA1F94287AAE4A001A1F9C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		64F88B85287266AB00C1008A /* Animated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F88B88287266AB00C1008A /* AnimatedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedApp.swift; sourceTree = "<group>"; };
 		64F88B8A287266AB00C1008A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,14 +60,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64F88BA7287269A800C1008A /* RiveRuntime in Frameworks */,
-				64C4E61C287A62E800EB00C2 /* RiveRuntime in Frameworks */,
+				64DA1F92287AA60B001A1F9C /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64DA1F8D287AA489001A1F9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				64F88BA8287269CD00C1008A /* OnBoardingView.swift */,
+				64119DAA287A645C00EB0453 /* SigninView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		64DA1F8E287AA49C001A1F9C /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				64F88BB22872C50200C1008A /* CustomFont.swift */,
+				64DA1F8B287A7D8D001A1F9C /* Extensions.swift */,
+				64DA1F89287A7965001A1F9C /* CustomTextField.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		64DA1F93287AAE3D001A1F9C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				64DA1F94287AAE4A001A1F9C /* TabBar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		64F88B7C287266AB00C1008A = {
 			isa = PBXGroup;
 			children = (
@@ -84,13 +113,12 @@
 		64F88B87287266AB00C1008A /* Animated */ = {
 			isa = PBXGroup;
 			children = (
+				64DA1F93287AAE3D001A1F9C /* Navigation */,
 				64F88BB12872C31C00C1008A /* Info.plist */,
+				64DA1F8E287AA49C001A1F9C /* Styles */,
+				64DA1F8D287AA489001A1F9C /* Views */,
 				64F88B88287266AB00C1008A /* AnimatedApp.swift */,
 				64F88B8A287266AB00C1008A /* ContentView.swift */,
-				64F88BA8287269CD00C1008A /* OnBoardingView.swift */,
-				64F88BB22872C50200C1008A /* CustomFont.swift */,
-				64119DAA287A645C00EB0453 /* SigninView.swift */,
-				64DA1F89287A7965001A1F9C /* CustomTextField.swift */,
 				64F88B8C287266AE00C1008A /* Assets.xcassets */,
 				64F88BAA2872B9D000C1008A /* Fonts */,
 				64F88B962872690C00C1008A /* RiveAssets */,
@@ -148,8 +176,7 @@
 			);
 			name = Animated;
 			packageProductDependencies = (
-				64F88BA6287269A800C1008A /* RiveRuntime */,
-				64C4E61B287A62E800EB00C2 /* RiveRuntime */,
+				64DA1F91287AA60B001A1F9C /* RiveRuntime */,
 			);
 			productName = Animated;
 			productReference = 64F88B85287266AB00C1008A /* Animated.app */;
@@ -180,8 +207,7 @@
 			);
 			mainGroup = 64F88B7C287266AB00C1008A;
 			packageReferences = (
-				64F88BA5287269A800C1008A /* XCRemoteSwiftPackageReference "rive-ios" */,
-				64C4E61A287A62E800EB00C2 /* XCRemoteSwiftPackageReference "rive-ios" */,
+				64DA1F90287AA60B001A1F9C /* XCRemoteSwiftPackageReference "rive-ios" */,
 			);
 			productRefGroup = 64F88B86287266AB00C1008A /* Products */;
 			projectDirPath = "";
@@ -222,9 +248,11 @@
 				64F88BA9287269CD00C1008A /* OnBoardingView.swift in Sources */,
 				64F88BB32872C50200C1008A /* CustomFont.swift in Sources */,
 				64DA1F8A287A7965001A1F9C /* CustomTextField.swift in Sources */,
+				64DA1F95287AAE4A001A1F9C /* TabBar.swift in Sources */,
 				64119DAB287A645C00EB0453 /* SigninView.swift in Sources */,
 				64F88B8B287266AB00C1008A /* ContentView.swift in Sources */,
 				64F88B89287266AB00C1008A /* AnimatedApp.swift in Sources */,
+				64DA1F8C287A7D8D001A1F9C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,15 +457,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		64C4E61A287A62E800EB00C2 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/rive-app/rive-ios";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		64F88BA5287269A800C1008A /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+		64DA1F90287AA60B001A1F9C /* XCRemoteSwiftPackageReference "rive-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rive-app/rive-ios";
 			requirement = {
@@ -448,14 +468,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		64C4E61B287A62E800EB00C2 /* RiveRuntime */ = {
+		64DA1F91287AA60B001A1F9C /* RiveRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 64F88BA5287269A800C1008A /* XCRemoteSwiftPackageReference "rive-ios" */;
-			productName = RiveRuntime;
-		};
-		64F88BA6287269A800C1008A /* RiveRuntime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 64F88BA5287269A800C1008A /* XCRemoteSwiftPackageReference "rive-ios" */;
+			package = 64DA1F90287AA60B001A1F9C /* XCRemoteSwiftPackageReference "rive-ios" */;
 			productName = RiveRuntime;
 		};
 /* End XCSwiftPackageProductDependency section */
