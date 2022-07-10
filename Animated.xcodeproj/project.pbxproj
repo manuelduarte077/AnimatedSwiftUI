@@ -67,6 +67,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64DA1F8D287AA489001A1F9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				64F88BA8287269CD00C1008A /* OnBoardingView.swift */,
+				64119DAA287A645C00EB0453 /* SigninView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		64DA1F8E287AA49C001A1F9C /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				64F88BB22872C50200C1008A /* CustomFont.swift */,
+				64DA1F8B287A7D8D001A1F9C /* Extensions.swift */,
+				64DA1F89287A7965001A1F9C /* CustomTextField.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		64F88B7C287266AB00C1008A = {
 			isa = PBXGroup;
 			children = (
@@ -87,13 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				64F88BB12872C31C00C1008A /* Info.plist */,
+				64DA1F8E287AA49C001A1F9C /* Styles */,
+				64DA1F8D287AA489001A1F9C /* Views */,
 				64F88B88287266AB00C1008A /* AnimatedApp.swift */,
 				64F88B8A287266AB00C1008A /* ContentView.swift */,
-				64F88BA8287269CD00C1008A /* OnBoardingView.swift */,
-				64F88BB22872C50200C1008A /* CustomFont.swift */,
-				64119DAA287A645C00EB0453 /* SigninView.swift */,
-				64DA1F8B287A7D8D001A1F9C /* Extensions.swift */,
-				64DA1F89287A7965001A1F9C /* CustomTextField.swift */,
 				64F88B8C287266AE00C1008A /* Assets.xcassets */,
 				64F88BAA2872B9D000C1008A /* Fonts */,
 				64F88B962872690C00C1008A /* RiveAssets */,
