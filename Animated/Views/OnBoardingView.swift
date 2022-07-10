@@ -2,9 +2,11 @@ import SwiftUI
 import RiveRuntime
 
 struct OnBoardingView: View {
-    let button = RiveViewModel(fileName: "button")
     @State var showModal = false
+    @Binding var show: Bool
     
+    let button = RiveViewModel(fileName: "button")
+
     
     var body: some View {
         ZStack {
@@ -36,6 +38,22 @@ struct OnBoardingView: View {
                     )
                     .zIndex(1)
             }
+            
+            Button {
+                withAnimation {
+                    show.toggle()
+                }
+            } label: {
+                Image(systemName: "xmark")
+                    .foregroundColor(.white)
+                    .frame(width: 36, height: 36)
+                    .background(.black)
+                    .mask(Circle())
+                    .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 10)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+            .padding(20)
+            .offset(y: showModal ? -200 : 80)
             
         }
     }
@@ -100,6 +118,6 @@ struct OnBoardingView: View {
 
 struct OnBoardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingView()
+        OnBoardingView(show: .constant(true))
     }
 }
