@@ -10,8 +10,13 @@
 		64119DAB287A645C00EB0453 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64119DAA287A645C00EB0453 /* SigninView.swift */; };
 		64DA1F8A287A7965001A1F9C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F89287A7965001A1F9C /* CustomTextField.swift */; };
 		64DA1F8C287A7D8D001A1F9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F8B287A7D8D001A1F9C /* Extensions.swift */; };
-		64DA1F92287AA60B001A1F9C /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 64DA1F91287AA60B001A1F9C /* RiveRuntime */; };
 		64DA1F95287AAE4A001A1F9C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F94287AAE4A001A1F9C /* TabBar.swift */; };
+		64DA1F98287AC595001A1F9C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F97287AC595001A1F9C /* Course.swift */; };
+		64DA1F9A287B5C5B001A1F9C /* VCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F99287B5C5B001A1F9C /* VCard.swift */; };
+		64DA1F9C287B641F001A1F9C /* HCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F9B287B641F001A1F9C /* HCard.swift */; };
+		64DA1F9E287B646A001A1F9C /* CourseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F9D287B646A001A1F9C /* CourseSection.swift */; };
+		64DA1FA0287B66A1001A1F9C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1F9F287B66A1001A1F9C /* HomeView.swift */; };
+		64DA1FA6287B691B001A1F9C /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 64DA1FA5287B691B001A1F9C /* RiveRuntime */; };
 		64F88B89287266AB00C1008A /* AnimatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F88B88287266AB00C1008A /* AnimatedApp.swift */; };
 		64F88B8B287266AB00C1008A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F88B8A287266AB00C1008A /* ContentView.swift */; };
 		64F88B8D287266AE00C1008A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64F88B8C287266AE00C1008A /* Assets.xcassets */; };
@@ -35,6 +40,11 @@
 		64DA1F89287A7965001A1F9C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		64DA1F8B287A7D8D001A1F9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		64DA1F94287AAE4A001A1F9C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		64DA1F97287AC595001A1F9C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		64DA1F99287B5C5B001A1F9C /* VCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCard.swift; sourceTree = "<group>"; };
+		64DA1F9B287B641F001A1F9C /* HCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCard.swift; sourceTree = "<group>"; };
+		64DA1F9D287B646A001A1F9C /* CourseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSection.swift; sourceTree = "<group>"; };
+		64DA1F9F287B66A1001A1F9C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		64F88B85287266AB00C1008A /* Animated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F88B88287266AB00C1008A /* AnimatedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedApp.swift; sourceTree = "<group>"; };
 		64F88B8A287266AB00C1008A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64DA1F92287AA60B001A1F9C /* RiveRuntime in Frameworks */,
+				64DA1FA6287B691B001A1F9C /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +104,15 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		64DA1F96287AC589001A1F9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64DA1F97287AC595001A1F9C /* Course.swift */,
+				64DA1F9D287B646A001A1F9C /* CourseSection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		64F88B7C287266AB00C1008A = {
 			isa = PBXGroup;
 			children = (
@@ -113,12 +132,16 @@
 		64F88B87287266AB00C1008A /* Animated */ = {
 			isa = PBXGroup;
 			children = (
+				64DA1F96287AC589001A1F9C /* Models */,
 				64DA1F93287AAE3D001A1F9C /* Navigation */,
 				64F88BB12872C31C00C1008A /* Info.plist */,
 				64DA1F8E287AA49C001A1F9C /* Styles */,
 				64DA1F8D287AA489001A1F9C /* Views */,
 				64F88B88287266AB00C1008A /* AnimatedApp.swift */,
 				64F88B8A287266AB00C1008A /* ContentView.swift */,
+				64DA1F99287B5C5B001A1F9C /* VCard.swift */,
+				64DA1F9F287B66A1001A1F9C /* HomeView.swift */,
+				64DA1F9B287B641F001A1F9C /* HCard.swift */,
 				64F88B8C287266AE00C1008A /* Assets.xcassets */,
 				64F88BAA2872B9D000C1008A /* Fonts */,
 				64F88B962872690C00C1008A /* RiveAssets */,
@@ -176,7 +199,7 @@
 			);
 			name = Animated;
 			packageProductDependencies = (
-				64DA1F91287AA60B001A1F9C /* RiveRuntime */,
+				64DA1FA5287B691B001A1F9C /* RiveRuntime */,
 			);
 			productName = Animated;
 			productReference = 64F88B85287266AB00C1008A /* Animated.app */;
@@ -207,7 +230,7 @@
 			);
 			mainGroup = 64F88B7C287266AB00C1008A;
 			packageReferences = (
-				64DA1F90287AA60B001A1F9C /* XCRemoteSwiftPackageReference "rive-ios" */,
+				64DA1FA4287B691B001A1F9C /* XCRemoteSwiftPackageReference "rive-ios" */,
 			);
 			productRefGroup = 64F88B86287266AB00C1008A /* Products */;
 			projectDirPath = "";
@@ -245,9 +268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DA1F98287AC595001A1F9C /* Course.swift in Sources */,
 				64F88BA9287269CD00C1008A /* OnBoardingView.swift in Sources */,
+				64DA1FA0287B66A1001A1F9C /* HomeView.swift in Sources */,
 				64F88BB32872C50200C1008A /* CustomFont.swift in Sources */,
+				64DA1F9C287B641F001A1F9C /* HCard.swift in Sources */,
+				64DA1F9E287B646A001A1F9C /* CourseSection.swift in Sources */,
 				64DA1F8A287A7965001A1F9C /* CustomTextField.swift in Sources */,
+				64DA1F9A287B5C5B001A1F9C /* VCard.swift in Sources */,
 				64DA1F95287AAE4A001A1F9C /* TabBar.swift in Sources */,
 				64119DAB287A645C00EB0453 /* SigninView.swift in Sources */,
 				64F88B8B287266AB00C1008A /* ContentView.swift in Sources */,
@@ -457,20 +485,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		64DA1F90287AA60B001A1F9C /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+		64DA1FA4287B691B001A1F9C /* XCRemoteSwiftPackageReference "rive-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rive-app/rive-ios";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		64DA1F91287AA60B001A1F9C /* RiveRuntime */ = {
+		64DA1FA5287B691B001A1F9C /* RiveRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 64DA1F90287AA60B001A1F9C /* XCRemoteSwiftPackageReference "rive-ios" */;
+			package = 64DA1FA4287B691B001A1F9C /* XCRemoteSwiftPackageReference "rive-ios" */;
 			productName = RiveRuntime;
 		};
 /* End XCSwiftPackageProductDependency section */

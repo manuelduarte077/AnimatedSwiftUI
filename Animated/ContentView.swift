@@ -2,29 +2,37 @@ import SwiftUI
 import RiveRuntime
 
 
-
 struct ContentView: View {
     @AppStorage("selectedTab") var selectedTab: Tab = .chat
-    
-    let button = RiveViewModel(fileName: "menu_button")
-    
     @State var isOpen = false
-    
+    let button = RiveViewModel(fileName: "menu_button")
+    // , stateMachineName: "State Machine", autoPlay: false, animationName: "open"
     
     var body: some View {
         ZStack {
-            switch selectedTab {
-                case .chat:
-                    Text("Chat")
-                case .search:
-                    Text("Search")
-                case .timer:
-                    Text("Timer")
-                case .bell:
-                    Text("Bell")
-                case .user:
-                    Text("User")
+            
+            Group {
+                switch selectedTab {
+                    case .chat:
+                        HomeView()
+                    case .search:
+                        Text("Search")
+                    case .timer:
+                        Text("Timer")
+                    case .bell:
+                        Text("Bell")
+                    case .user:
+                        Text("User")
+                }
             }
+            .safeAreaInset(edge: .bottom) {
+                Color.clear.frame(height: 80)
+            }
+            .safeAreaInset(edge: .top) {
+                Color.clear.frame(height: 104)
+            }
+            .ignoresSafeArea()
+            
             button.view()
                 .frame(width: 44, height: 44)
                 .mask(Circle())
@@ -32,10 +40,9 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .padding()
                 .onTapGesture {
-                    try? button.setInput("isOpen", value: isOpen)
+                    button.setInput("isOpen", value: isOpen)
                     isOpen.toggle()
                 }
-            
             
             TabBar()
         }
